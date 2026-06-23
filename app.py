@@ -68,7 +68,7 @@ with tab1:
         elif val == 'Kering': return 'background-color: #fff3cd; color: #856404; font-weight: bold'
         return ''
 
-    st.dataframe(df_historis.head(10).style.applymap(warna_status, subset=['Status Tanah']))
+    st.dataframe(df_historis.head(10).style.map(warna_status, subset=['Status Tanah']))
     
     st.markdown("### 📈 Ringkasan Statistik Dataset")
     col1, col2, col3 = st.columns(3)
